@@ -1,11 +1,9 @@
-import { Content } from "./components/Content";
-import { Header } from "./components/Header";
+import { Home } from "./templates";
 
 function App() {
   return (
     <>
-      <Header />
-      <Content />
+      <Home />
     </>
   );
 }

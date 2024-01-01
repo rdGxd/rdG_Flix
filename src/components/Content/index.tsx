@@ -1,18 +1,29 @@
-import { getData } from "../../api/getData";
+import { useState } from "react";
+import { IMG_URL } from "../../config";
 import { DataType } from "../../types/Data";
+import { Button } from "../Button";
+import { PageError } from "../Error";
+import { ImageMovie } from "../ImageMovie";
+import { OverviewMovie } from "../Overview";
+import { Paragraph } from "../Paragraph";
+import { TitleMovie } from "../TitleMovie";
 
 export const Content = () => {
-  const handleGetMovie = async () => {
-    const data: DataType = await getData();
-
-    if (!data.id) {
-      console.log(data.status_message);
-    }
-  };
+  const [data, setData] = useState<DataType>();
 
   return (
     <>
-      <h1 onClick={handleGetMovie}>Oi</h1>
+      {data?.id && (
+        <>
+          <ImageMovie alt={data.title} src={`${IMG_URL}${data.poster_path}`} />
+          <TitleMovie title={data.title} />
+          <OverviewMovie overview={data.overview} />
+        </>
+      )}
+
+      {data?.status_code && <PageError />}
+      <Button setData={setData} />
+      <Paragraph />
     </>
   );
 };
