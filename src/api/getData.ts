@@ -1,20 +1,20 @@
-import { API_KEY, BASE_URL } from "../config/index";
+import { BASE_URL } from "../config/index";
 import { DataType } from "../types/Data";
 import { DataTrailer } from "../types/DataTrailer";
+import { totalResults } from "./totalResults";
 
-const randomNumber = () => Math.floor(Math.random() * 780498);
+export const options = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: `${import.meta.env.VITE_API_KEY}`,
+  },
+};
 
 export const getData = async () => {
-  const numberMovie = randomNumber();
-  const url = `${BASE_URL}${numberMovie}${API_KEY}?include_adult=false`;
+  const numberMovie = await totalResults();
+  const url = `${BASE_URL}${numberMovie}`;
   const urlTrailer = `https://api.themoviedb.org/3/movie/${numberMovie}/videos`;
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `${import.meta.env.VITE_API_KEY}`,
-    },
-  };
 
   try {
     const response = await fetch(url, options);
