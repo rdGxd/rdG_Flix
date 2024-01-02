@@ -1,18 +1,17 @@
 import { SetStateAction } from "react";
 import { getData } from "../../api/getData";
 import btnImg from "../../assets/btnImg.svg";
-import { DataType } from "../../types/Data";
+import { Data } from "../../types/Data";
+import { DataMovie } from "../../types/DataMovie";
 import { DataTrailer } from "../../types/DataTrailer";
 
 type ButtonProps = {
-  setData: React.Dispatch<
-    React.SetStateAction<(DataType & DataTrailer) | undefined>
-  >;
+  setData: React.Dispatch<React.SetStateAction<Data | undefined>>;
 };
 
 type getMovieProps =
   | {
-      movie: SetStateAction<DataType | undefined> | DataType;
+      movie: SetStateAction<DataMovie | undefined> | DataMovie;
       trailer: SetStateAction<DataTrailer | undefined> | DataTrailer;
     }
   | undefined;

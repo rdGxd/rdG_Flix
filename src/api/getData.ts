@@ -1,5 +1,5 @@
 import { BASE_URL } from "../config/index";
-import { DataType } from "../types/Data";
+import { DataMovie } from "../types/DataMovie";
 import { DataTrailer } from "../types/DataTrailer";
 import { options } from "./optionsFetch";
 import { totalResults } from "./totalResults";
@@ -12,7 +12,7 @@ export const getData = async () => {
   try {
     const response = await fetch(url, options);
     const trailer = await fetch(urlTrailer, options);
-    const data: DataType = await response.json();
+    const data: DataMovie = await response.json();
     const dataTrailer: DataTrailer = await trailer.json();
     return {
       movie: data,

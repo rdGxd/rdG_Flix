@@ -17,7 +17,7 @@ export default {
         iPhone12: "390px",
         Pixel7: "412px",
         iPhoneXR: "414px",
-        "3xl": "1920px",
+        "3xl": "1900px",
       },
     },
   },
