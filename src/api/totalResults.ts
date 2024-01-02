@@ -1,4 +1,4 @@
-import { options } from "./getData";
+import { options } from "./optionsFetch";
 
 export const totalResults = async () => {
   const takeNumberMovies = `https://api.themoviedb.org/3/discover/movie?include_adult=false`;

@@ -1,15 +1,8 @@
 import { BASE_URL } from "../config/index";
 import { DataType } from "../types/Data";
 import { DataTrailer } from "../types/DataTrailer";
+import { options } from "./optionsFetch";
 import { totalResults } from "./totalResults";
-
-export const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization: `${import.meta.env.VITE_API_KEY}`,
-  },
-};
 
 export const getData = async () => {
   const numberMovie = await totalResults();
