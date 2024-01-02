@@ -16,7 +16,7 @@ export const Button = ({ setData }: ButtonProps) => {
     <button
       type="button"
       onClick={handleGetMovie}
-      className="my-7 ml-16 flex rounded bg-bgButton p-2 font-bold text-black"
+      className="3xl:ml-[850px] my-7 flex rounded bg-bgButton p-2 font-bold text-black  sm:ml-56 md:ml-72 lg:ml-[430px] xl:ml-[550px] 2xl:ml-[675px]"
     >
       <img src={btnImg} alt="" className="mr-4 " />
       Encontrar filme
