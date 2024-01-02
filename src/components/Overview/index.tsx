@@ -3,5 +3,9 @@ type OverviewProps = {
 };
 
 export const OverviewMovie = ({ overview }: OverviewProps) => {
-  return <p className="xp-2 text-center 2xl:w-full ">{overview}</p>;
+  return (
+    <p className="p-2 text-center  2xl:ml-[400px] 2xl:w-1/2 3xl:ml-[500px] ">
+      {overview}
+    </p>
+  );
 };
