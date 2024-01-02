@@ -6,7 +6,7 @@ const randomNumber = () => Math.floor(Math.random() * 780498);
 
 export const getData = async () => {
   const numberMovie = randomNumber();
-  const url = `${BASE_URL}${numberMovie}${API_KEY}`;
+  const url = `${BASE_URL}${numberMovie}${API_KEY}?include_adult=false`;
   const urlTrailer = `https://api.themoviedb.org/3/movie/${numberMovie}/videos`;
   const options = {
     method: "GET",
@@ -17,7 +17,7 @@ export const getData = async () => {
   };
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, options);
     const trailer = await fetch(urlTrailer, options);
     const data: DataType = await response.json();
     const dataTrailer: DataTrailer = await trailer.json();
