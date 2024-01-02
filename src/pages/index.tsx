@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Button } from "../Button";
-import { Error } from "../Error";
-import { Header } from "../Header";
-import { Paragraph } from "../Paragraph";
-import { Success } from "../Success";
-import { Data } from "../../types/Data";
+import { Button } from "../components/Button";
+import { Error } from "../components/Error";
+import { Header } from "../components/Header";
+import { Paragraph } from "../components/Paragraph";
+import { Success } from "../components/Success";
+import { Data } from "../types/Data";
 
-export const Content = () => {
+export const Home = () => {
   const [data, setData] = useState<Data>();
 
   return (
