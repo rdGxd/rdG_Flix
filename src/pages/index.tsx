@@ -12,7 +12,15 @@ export const Home = () => {
   return (
     <div className="flex flex-wrap justify-center sm:block">
       <Header />
-      {data?.movie.id && <Success data={data} />}
+      {data?.movie.id && (
+        <Success
+          title={data.movie.title}
+          overview={data.movie.overview}
+          src={data.movie.poster_path}
+          results={data.trailer.results}
+        />
+      )}
+
       {data?.movie.status_message && <Error />}
       <Button setData={setData} />
       <Paragraph />
