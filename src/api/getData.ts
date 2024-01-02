@@ -26,6 +26,6 @@ export const getData = async () => {
       trailer: dataTrailer,
     };
   } catch (error) {
-    console.error("DEU RUIM", error);
+    //
   }
 };
