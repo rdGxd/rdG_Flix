@@ -1,9 +1,5 @@
 import { useState } from "react";
-import { Button } from "../components/Button";
-import { Error } from "../components/Error";
-import { Header } from "../components/Header";
-import { Paragraph } from "../components/Paragraph";
-import { Success } from "../components/Success";
+import { Button, Error, Header, Paragraph, Success } from "../components";
 import { Data } from "../types/Data";
 
 export const Home = () => {

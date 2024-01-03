@@ -1,9 +1,6 @@
+import { ImageMovie, LinkTrailer, OverviewMovie, TitleMovie } from "..";
 import { IMG_URL } from "../../config";
 import { Result } from "../../types/DataTrailer";
-import { ImageMovie } from "../ImageMovie";
-import { LinkTrailer } from "../LinkTrailer";
-import { OverviewMovie } from "../Overview";
-import { TitleMovie } from "../TitleMovie";
 
 type SuccessProps = {
   title: string;

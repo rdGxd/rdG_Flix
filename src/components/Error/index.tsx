@@ -1,6 +1,5 @@
+import { ImageMovie, TitleMovie } from "..";
 import PostError from "../../assets/PosterError.svg";
-import { ImageMovie } from "../ImageMovie";
-import { TitleMovie } from "../TitleMovie";
 
 export const Error = () => {
   return (

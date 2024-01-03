@@ -11,8 +11,8 @@ type ButtonProps = {
 
 type getMovieProps =
   | {
-      movie: SetStateAction<DataMovie | undefined> | DataMovie;
-      trailer: SetStateAction<DataTrailer | undefined> | DataTrailer;
+      movie: SetStateAction<DataMovie | undefined>;
+      trailer: SetStateAction<DataTrailer | undefined>;
     }
   | undefined;
 
